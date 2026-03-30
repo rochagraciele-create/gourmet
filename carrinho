@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Doces gourmet</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    function carregarCarrinho() {
+      const listaCarrinho = document.getElementById('lista-carrinho');
+      const totalElement = document.getElementById('total');
+      
+      if (carrinho.length === 0) {
+        listaCarrinho.innerHTML = '<p class="vazio">Seu carrinho está vazio. <a href="index.html">Volte e adicione produtos!</a></p>';
+        totalElement.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+      let total = 0;
+
+      carrinho.forEach((item, index) => {
+        total += item.preco;
+        html += `
+          <div class="item-carrinho">
+            <span>${item.nome}</span>
+            <span>R$ ${item.preco.toFixed(2)}</span>
+            <button onclick="removerItem(${index})" class="btn-remover">Remover</button>
+          </div>
+        `;
+      });
+
+      listaCarrinho.innerHTML = html;
+      totalElement.innerHTML = `<h3>Total: R$ ${total.toFixed(2)}</h3>`;
+    }
+
+    function removerItem(index) {
+      carrinho.splice(index, 1);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      carregarCarrinho();
+    }
+
+    function limparCarrinho() {
+      carrinho = [];
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      carregarCarrinho();
+    }
+
+    function finalizarPedido() {
+      if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio!');
+        return;
+      }
+
+      let total = carrinho.reduce((sum, item) => sum + item.preco, 0);
+      alert('Obrigado por sua compra!\n\nItens: ' + carrinho.length + '\nTotal: R$ ' + total.toFixed(2) + '\n\nSeu pedido foi registrado com sucesso!');
+      limparCarrinho();
+      window.location.href = 'index.html';
+    }
+
+    window.onload = carregarCarrinho;
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🍰 Doces gourmet</h1>
+    <nav>
+      <a href="index.html">Produtos</a>
+      <a href="sabores.html">Sabores</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="carrinho.html">🛒 Carrinho</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>🛒 Seu Carrinho de Compras</h2>
+    
+    <div class="container-carrinho">
+      <div id="lista-carrinho" class="lista-carrinho">
+        <!-- Items do carrinho aparecem aqui -->
+      </div>
+
+      <div id="total" class="resumo-total">
+        <!-- Total aparece aqui -->
+      </div>
+
+      <div class="botoes-acao">
+        <button onclick="limparCarrinho()" class="btn-limpar">Limpar Carrinho</button>
+        <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar Pedido</button>
+      </div>
+    </div>
+
+    <section class="info-entrega">
+      <h3>Informações de Entrega</h3>
+      <p>Após finalizar seu pedido, você receberá um e-mail com os detalhes e rastreamento.</p>
+      <p><strong>Frete:</strong> Grátis para compras acima de R$ 50,00</p>
+      <p><strong>Prazo de Entrega:</strong> 2 a 5 dias úteis</p>
+      <p><strong>Formas de Pagamento:</strong> Cartão de Crédito, Débito, Pix e Boleto</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Doces gourmet. Todos os direitos reservados.</p>
+    <p>Contato: (XX) 9999-9999 | emailrocha.graciele@escola.pr.gov.br.com</p>
+  </footer>
+</body>
+</html>
