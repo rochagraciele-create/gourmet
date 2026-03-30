@@ -374,6 +374,4 @@
   <footer>
     <p>&copy; 2026 Doces gourmet. Todos os direitos reservados.</p>
     <p>Contato: (XX) 9999-9999 | emailrocha.graciele@escola.pr.gov.br.com</p>
-  </footer>
-</body>
-</html>
+  </foote
