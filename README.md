@@ -88,7 +88,7 @@
   <footer>
     <p>&copy; 2026 Doces gourmet. Todos os direitos reservados.</p>
     <p>Contato: (XX) 9999-9999 | emailrocha.graciele@escola.pr.gov.br
-<!DOCTYPE html>
+<!sabores.html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -166,7 +166,7 @@
   </footer>
 </body>
 </html>
-<!DOCTYPE html>
+<!sobre.html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -268,7 +268,7 @@
     <p>Contato: (XX) 9999-9999 | emailrocha.graciele@gmail.com</p>
   </footer>
 </body>
-<!DOCTYPE html>
+<!carrinho.html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -377,3 +377,235 @@
   </footer>
 </body>
 </html>
+<style.css>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fff7f5;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #ff7a7a, #ffb6b6);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffecec;
+}
+
+.hero h2 {
+  margin-bottom: 10px;
+}
+
+/* TITULOS */
+.titulo-produtos {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* PRODUTOS */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.descricao {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.preco {
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+/* BOTÕES */
+button {
+  background-color: #ff7a7a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e85d5d;
+}
+
+/* SABORES */
+.sabores-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sabor-grupo {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.sabor-grupo ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* SOBRE */
+.sobre-empresa, .nossa-historia, .info-sabores {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* EQUIPE */
+.funcionarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.funcionario {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  font-size: 40px;
+}
+
+/* VALORES */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.valor {
+  background: #ffecec;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* CARRINHO */
+.container-carrinho {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.btn-remover {
+  background-color: #ff4d4d;
+}
+
+.btn-remover:hover {
+  background-color: #cc0000;
+}
+
+.resumo-total {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.botoes-acao {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-limpar {
+  background-color: gray;
+}
+
+.btn-finalizar {
+  background-color: #28a745;
+}
+
+.btn-finalizar:hover {
+  background-color: #1e7e34;
+}
+
+.vazio {
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  background: #ff7a7a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+  
+  
