@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores | Doces gourmet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍰 Doces gourmet</h1>
+    <nav>
+      <a href="index.html">Produtos</a>
+      <a href="sabores.html">Sabores</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="carrinho.html">🛒 Carrinho</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sabores Disponíveis</h2>
+    
+    <div class="sabores-container">
+      <section class="sabor-grupo">
+        <h3>🍫 Brownies</h3>
+        <ul>
+          <li>Chocolate Tradicional</li>
+          <li>Chocolate com Nozes</li>
+          <li>Chocolate Branco</li>
+          <li>Duplo Chocolate</li>
+          <li>Brownie com Calda</li>
+        </ul>
+      </section>
+
+      <section class="sabor-grupo">
+        <h3>🍪 Cookies</h3>
+        <ul>
+          <li>Chocolate Clássico</li>
+          <li>Chocolate Branco com Cranberry</li>
+          <li>Red Velvet</li>
+          <li>Cookies and Cream</li>
+          <li>Morango com Chocolate</li>
+        </ul>
+      </section>
+
+      <section class="sabor-grupo">
+        <h3>🍬 Docinhos</h3>
+        <ul>
+          <li>Brigadeiro Tradicional</li>
+          <li>Brigadeiro Gourmet</li>
+          <li>Beijinho de Coco</li>
+          <li>Cajuzinho</li>
+          <li>Dois Amores</li>
+          <li>Bicho de Pé</li>
+          <li>Romeu e Julieta</li>
+          <li>Bombom de Amendoim</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="info-sabores">
+      <h3>Ingredientes Premium</h3>
+      <p>Todos os nossos produtos são feitos com:</p>
+      <ul>
+        <li>✓ Chocolate de qualidade premium</li>
+        <li>✓ Frutas e ingredientes naturais</li>
+        <li>✓ Sem conservantes artificiais</li>
+        <li>✓ Feitos com amor e dedicação</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Doces gourmet. Todos os direitos reservados.</p>
+    <p>Contato: (XX) 9999-9999 | emailrocha.graciele@escola.pr.gov.br.com</p>
+  </footer>
+</body>
+</html>
